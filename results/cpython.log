@@ -1,0 +1,25 @@
+== venv cgoto_clang
+== venv cgoto_gcc
+== venv switch_clang
+== venv switch_gcc
+== venv tail_clang
+== venv tail_gcc
+== run cgoto_gcc 23:38:55
+run failed for cgoto_gcc (see /home/kr0/cgoto-research/results/cpython_i9-14900k/cgoto_gcc.log)
+WARNING: cgoto_gcc run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/cgoto_gcc.log)
+== run tail_gcc 00:49:07
+run failed for tail_gcc (see /home/kr0/cgoto-research/results/cpython_i9-14900k/tail_gcc.log)
+WARNING: tail_gcc run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/tail_gcc.log)
+== run cgoto_clang 01:56:42
+run failed for cgoto_clang (see /home/kr0/cgoto-research/results/cpython_i9-14900k/cgoto_clang.log)
+WARNING: cgoto_clang run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/cgoto_clang.log)
+== run switch_clang 03:06:28
+run failed for switch_clang (see /home/kr0/cgoto-research/results/cpython_i9-14900k/switch_clang.log)
+WARNING: switch_clang run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/switch_clang.log)
+== run switch_gcc 04:19:25
+run failed for switch_gcc (see /home/kr0/cgoto-research/results/cpython_i9-14900k/switch_gcc.log)
+WARNING: switch_gcc run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/switch_gcc.log)
+== run tail_clang 05:28:47
+run failed for tail_clang (see /home/kr0/cgoto-research/results/cpython_i9-14900k/tail_clang.log)
+WARNING: tail_clang run installed packages during measurement (see /home/kr0/cgoto-research/results/cpython_i9-14900k/tail_clang.log)
+done 06:39:00

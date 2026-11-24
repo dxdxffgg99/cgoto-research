@@ -1,0 +1,47 @@
+# analysis/layoutdist_summary.py --orig: 100-layout experiment, -O2, Collatz limit 2M, collapse = indirect mispredicts > 10M
+
+cpu            variant         data     n collapse slow instr const median Gcyc best-worst     CV  collapsed seeds | slow seeds
+i5-1135g7      cgoto_clang     orig   101        1    1          NO       5.248      47.5%   4.6%  63 | 63
+i5-1135g7      cgoto_gcc       orig   101        0    0         yes       5.017       8.3%   1.1%   | 
+i5-1135g7      mtargs_clang    orig   101        6    6         yes       5.044      43.9%   9.2%  10 14 21 68 81 99 | 10 14 21 68 81 99
+i5-1135g7      mtargs_gcc      orig   101        5    0          NO       5.476      33.3%   5.9%  13 33 54 71 75 | 
+i5-1135g7      musttail_clang  orig   101        2    2         yes       5.428     102.2%  10.5%  8 90 | 8 90
+i5-1135g7      musttail_gcc    orig   101        5    0          NO       5.365      14.5%   2.4%  29 37 38 55 74 | 
+i5-1135g7      switch_clang    orig   101        3    3         yes       5.104      45.2%   6.9%  15 65 73 | 15 65 73
+i5-1135g7      switch_gcc      orig   101        0    0         yes       5.929      18.9%   3.3%   | 
+i9-14900k      cgoto_clang     orig   101        1    0          NO       4.922      37.7%   4.8%  63 | 
+i9-14900k      cgoto_gcc       orig   101        1    0         yes       4.437      23.8%   2.6%  57 | 
+i9-14900k      mtargs_clang    orig   101        5    0         yes       4.556      32.8%   5.9%  10 14 21 68 99 | 
+i9-14900k      mtargs_gcc      orig   101        1    0          NO       4.920      35.7%   4.5%  13 | 
+i9-14900k      musttail_clang  orig   101        2    2         yes       5.165      52.1%   6.5%  8 90 | 8 90
+i9-14900k      musttail_gcc    orig   101        0    0          NO       4.848      24.9%   4.1%   | 
+i9-14900k      switch_clang    orig   101        0    0         yes       4.586      17.5%   3.0%   | 
+i9-14900k      switch_gcc      orig   101        0    0         yes       5.806      14.5%   2.3%   | 
+
+family                                        i5        i9        both
+switch gcc (1 indirect jump)             0/101     0/101     0/202  (0.0%)
+cgoto                                    1/202     2/202     3/404  (0.7%)
+switch clang (jumps replicated)          3/101     0/101     3/202  (1.5%)
+tail call (musttail, musttail_args)     18/404     8/404    26/808  (3.2%)
+
+Fisher exact test (two-sided), both CPUs pooled:
+  cgoto 3/404 vs tail call (musttail, musttail_args) 26/808: p = 0.0082
+  cgoto 3/404 vs switch clang (jumps replicated) 3/202: p = 0.4058
+  switch gcc (1 indirect jump) 0/202 vs tail call (musttail, musttail_args) 26/808: p = 0.0048
+  switch clang (jumps replicated) 3/202 vs tail call (musttail, musttail_args) 26/808: p = 0.2418
+
+by compiler (both CPUs pooled):
+  gcc                     12/808  (1.5%)  [cgoto_gcc, mtargs_gcc, musttail_gcc, switch_gcc]
+  clang                   20/808  (2.5%)  [cgoto_clang, mtargs_clang, musttail_clang, switch_clang]
+  gcc without switch_gcc  12/606  (2.0%)  [cgoto_gcc, mtargs_gcc, musttail_gcc]
+  Fisher gcc vs clang: p = 0.21074
+  Fisher gcc without switch_gcc vs clang: p = 0.59134
+
+same layout collapsing on both CPUs (per variant: i9 collapses that also collapse on i5):
+  cgoto_clang     i5  1  i9  1  both  1
+  cgoto_gcc       i5  0  i9  1  both  0
+  mtargs_clang    i5  6  i9  5  both  5
+  mtargs_gcc      i5  5  i9  1  both  1
+  musttail_clang  i5  2  i9  2  both  2
+  musttail_gcc    i5  5  i9  0  both  0
+  switch_clang    i5  3  i9  0  both  0

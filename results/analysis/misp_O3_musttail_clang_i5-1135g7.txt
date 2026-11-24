@@ -1,0 +1,114 @@
+# /home/kr-dev/workspace/cgoto-research/build/O3/musttail_clang  event=br_misp_retired.all_branches:upp period=10007  2026-11-22T22:27:22+09:00
+## mispredictions by function
+    66.62%  [.] jeven  -      -            
+    32.97%  [.] shri   -      -            
+     0.21%  [.] addi   -      -            
+     0.18%  [.] jnei   -      -            
+     0.00%  [.] muli   -      -            
+## mispredictions by instruction
+     0.21%  [.] addi   addi+37      -      -            
+    34.81%  [.] jeven  jeven+16     -      -            
+     0.04%  [.] jeven  jeven+34     -      -            
+    31.78%  [.] jeven  jeven+52     -      -            
+     0.03%  [.] jnei   jnei+16      -      -            
+     0.06%  [.] jnei   jnei+21      -      -            
+     0.10%  [.] jnei   jnei+57      -      -            
+     0.00%  [.] muli   muli+42      -      -            
+    32.97%  [.] shri   shri+37      -      -            
+## annotate jeven
+ Percent |	Source code & Disassembly of musttail_clang for br_misp_retired.all_branches:upp (40584 samples, percent: local period)
+---------------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    0000000000001450 <jeven>:
+    0.00 :   1450:   lea    0x2bc9(%rip),%rax        # 4020 <ram>
+    0.00 :   1457:   mov    0x8(%rax,%rdi,8),%rcx
+    0.00 :   145c:   testb  $0x1,(%rax,%rcx,8)
+   52.25 :   1460:   jne    1475 <jeven+0x25>
+    0.00 :   1462:   mov    0x10(%rax,%rdi,8),%rdi
+    0.00 :   1467:   mov    (%rax,%rdi,8),%rax
+    0.00 :   146b:   lea    0x292e(%rip),%rcx        # 3da0 <labels>
+    0.05 :   1472:   jmp    *(%rcx,%rax,8)
+    0.00 :   1475:   add    $0x3,%rdi
+    0.00 :   1479:   mov    (%rax,%rdi,8),%rax
+    0.00 :   147d:   lea    0x291c(%rip),%rcx        # 3da0 <labels>
+   47.70 :   1484:   jmp    *(%rcx,%rax,8)
+## annotate jnei
+ Percent |	Source code & Disassembly of musttail_clang for br_misp_retired.all_branches:upp (112 samples, percent: local period)
+-------------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    0000000000001490 <jnei>:
+    0.00 :   1490:   lea    0x2b89(%rip),%rax        # 4020 <ram>
+    0.00 :   1497:   mov    0x8(%rax,%rdi,8),%rcx
+    0.00 :   149c:   mov    (%rax,%rcx,8),%rcx
+   16.07 :   14a0:   cmp    0x10(%rax,%rdi,8),%rcx
+   32.14 :   14a5:   jne    14b9 <jnei+0x29>
+    0.00 :   14a7:   add    $0x4,%rdi
+    0.00 :   14ab:   mov    (%rax,%rdi,8),%rax
+    0.00 :   14af:   lea    0x28ea(%rip),%rcx        # 3da0 <labels>
+    0.00 :   14b6:   jmp    *(%rcx,%rax,8)
+    0.00 :   14b9:   mov    0x18(%rax,%rdi,8),%rdi
+    0.00 :   14be:   mov    (%rax,%rdi,8),%rax
+    0.00 :   14c2:   lea    0x28d7(%rip),%rcx        # 3da0 <labels>
+   51.79 :   14c9:   jmp    *(%rcx,%rax,8)
+## annotate addi
+ Percent |	Source code & Disassembly of musttail_clang for br_misp_retired.all_branches:upp (130 samples, percent: local period)
+-------------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    00000000000013c0 <addi>:
+    0.00 :   13c0:   lea    0x2c59(%rip),%rax        # 4020 <ram>
+    0.00 :   13c7:   mov    0x8(%rax,%rdi,8),%rcx
+    0.00 :   13cc:   mov    0x10(%rax,%rdi,8),%rdx
+    0.00 :   13d1:   add    %rdx,(%rax,%rcx,8)
+    0.00 :   13d5:   mov    0x18(%rax,%rdi,8),%rax
+    0.00 :   13da:   add    $0x3,%rdi
+    0.00 :   13de:   lea    0x29bb(%rip),%rcx        # 3da0 <labels>
+  100.00 :   13e5:   jmp    *(%rcx,%rax,8)
+## annotate loadi
+## annotate mov
+## annotate muli
+ Percent |	Source code & Disassembly of musttail_clang for br_misp_retired.all_branches:upp (3 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    00000000000013f0 <muli>:
+    0.00 :   13f0:   lea    0x2c29(%rip),%rax        # 4020 <ram>
+    0.00 :   13f7:   mov    0x8(%rax,%rdi,8),%rcx
+    0.00 :   13fc:   mov    (%rax,%rcx,8),%rdx
+    0.00 :   1400:   imul   0x10(%rax,%rdi,8),%rdx
+    0.00 :   1406:   mov    %rdx,(%rax,%rcx,8)
+    0.00 :   140a:   mov    0x18(%rax,%rdi,8),%rax
+    0.00 :   140f:   add    $0x3,%rdi
+    0.00 :   1413:   lea    0x2986(%rip),%rcx        # 3da0 <labels>
+  100.00 :   141a:   jmp    *(%rcx,%rax,8)
+## annotate shri
+ Percent |	Source code & Disassembly of musttail_clang for br_misp_retired.all_branches:upp (20087 samples, percent: local period)
+---------------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    0000000000001420 <shri>:
+    0.00 :   1420:   lea    0x2bf9(%rip),%rax        # 4020 <ram>
+    0.00 :   1427:   movzbl 0x10(%rax,%rdi,8),%ecx
+    0.00 :   142c:   mov    0x8(%rax,%rdi,8),%rdx
+    0.00 :   1431:   shrq   %cl,(%rax,%rdx,8)
+    0.00 :   1435:   mov    0x18(%rax,%rdi,8),%rax
+    0.00 :   143a:   add    $0x3,%rdi
+    0.00 :   143e:   lea    0x295b(%rip),%rcx        # 3da0 <labels>
+  100.00 :   1445:   jmp    *(%rcx,%rax,8)

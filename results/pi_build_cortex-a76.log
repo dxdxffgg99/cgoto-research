@@ -1,0 +1,17 @@
+== [22:53:08] build probe
+== [22:53:08] build micro -O0
+== [22:59:48] build micro -O1
+== [23:02:48] build micro -O2
+== [23:05:30] build micro -O3
+== [23:07:59] build layout (100 seeds)
+== [23:08:41] build lua
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+== [23:09:37] build wamr
+== [23:10:34] check wamr outputs
+== [23:12:39] build done: 89 ok, 0 wrong

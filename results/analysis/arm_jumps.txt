@@ -1,0 +1,20 @@
+# analysis/arm_jumps.sh -O2  2026-11-23
+# arm-none-eabi-gcc (Arch Repository) 16.2.0 | clang version 23.1.5 | gcc (GCC) 16.2.1 20260810
+gcc-aarch32-thumb2     switch   jumps=2 distinct_tails(k=3)=2 largest_group=1
+gcc-aarch32-thumb2     cgoto    jumps=3 distinct_tails(k=3)=2 largest_group=2
+gcc-aarch32-thumb2     cgotonm  jumps=79 distinct_tails(k=3)=2 largest_group=78
+gcc-aarch32-arm        switch   jumps=1 distinct_tails(k=3)=1 largest_group=1
+gcc-aarch32-arm        cgoto    jumps=4 distinct_tails(k=3)=4 largest_group=1
+gcc-aarch32-arm        cgotonm  jumps=122 distinct_tails(k=3)=3 largest_group=45
+clang-aarch64          switch   jumps=1 distinct_tails(k=3)=1 largest_group=1
+clang-aarch64          cgoto    jumps=90 distinct_tails(k=3)=6 largest_group=66
+clang-aarch64          cgotonm  jumps=142 distinct_tails(k=3)=6 largest_group=65
+clang-aarch32-thumb2   switch   jumps=1 distinct_tails(k=3)=1 largest_group=1
+clang-aarch32-thumb2   cgoto    jumps=55 distinct_tails(k=3)=8 largest_group=46
+clang-aarch32-thumb2   cgotonm  jumps=79 distinct_tails(k=3)=8 largest_group=46
+clang-x86-64           switch   jumps=1 distinct_tails(k=3)=1 largest_group=1
+clang-x86-64           cgoto    jumps=46 distinct_tails(k=3)=2 largest_group=44
+clang-x86-64           cgotonm  jumps=157 distinct_tails(k=3)=2 largest_group=155
+gcc-x86-64             switch   jumps=1 distinct_tails(k=3)=1 largest_group=1
+gcc-x86-64             cgoto    jumps=6 distinct_tails(k=3)=6 largest_group=1
+gcc-x86-64             cgotonm  jumps=78 distinct_tails(k=3)=6 largest_group=33

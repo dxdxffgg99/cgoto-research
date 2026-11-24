@@ -1,0 +1,27 @@
+tag: cortex-a76
+Model name:                              Cortex-A76
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               ARM
+Model name:                              Cortex-A76
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             2400.0000
+CPU min MHz:                             1500.0000
+NUMA node0 CPU(s):                       0-3
+NUMA node1 CPU(s):                       0-3
+NUMA node2 CPU(s):                       0-3
+NUMA node3 CPU(s):                       0-3
+NUMA node4 CPU(s):                       0-3
+NUMA node5 CPU(s):                       0-3
+NUMA node6 CPU(s):                       0-3
+NUMA node7 CPU(s):                       0-3
+Linux alpeq1 6.18.60+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.18.60-1+rpt1 (2026-11-03) aarch64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+gcc: /home/dixie/opt/bin/gcc gcc (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 15.2.1 20251203
+clang: /home/dixie/opt/bin/clang clang version 21.1.8 (https://github.com/llvm/llvm-project 2078da43e25a4623cab2d0d60decddf709aaea28)
+gcc preserve_none: no (tailpn_gcc not built)
+governor: ondemand (not fixed, no root)
+core: taskset mask 8; cooldown COOL=50 MINSLEEP=3 MAXWAIT=60
+counters: bench/pstat (perf_event_open, user mode); perf_event_paranoid=2
+other load: shared machine, services running (see loadavg column)
+indirect-misprediction event: 0x118

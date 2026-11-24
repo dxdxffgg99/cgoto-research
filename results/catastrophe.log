@@ -1,0 +1,45 @@
+# binary: top mispredicting branches (share%, symbol+off, address, kind, distance to other top indirect jumps)
+== O2_cgoto_clang_63
+  21.86%  main+527       0x1387   indirect jmp    *(%rsi,%rcx,8)
+  61.47%  main+593       0x13c9   cond     jne    13e7 <main+0x26f>
+  15.34%  main+634       0x13f2   indirect jmp    *(%rsi,%rcx,8)
+    pair 0x1387 0x13f2  distance=107 (0x6b)  xor=0x75  same64B=n same4K=y
+== O2_cgoto_gcc_57
+  55.23%  main+192       0x1105   cond     jne    10ad <main+0x68>
+  44.05%  main+366       0x11b3   indirect jmp    *(%rsi,%rcx,8)
+== O2_mtargs_clang_10
+  20.88%  jeven+55       0x19f8   indirect jmp    *(%rdx,%rax,8)
+  46.75%  jeven+9        0x19ca   cond     jne    19f0 <jeven+0x2f>
+  31.55%  shri+23        0x1987   indirect jmp    *(%rdx,%rax,8)
+    pair 0x1987 0x19f8  distance=113 (0x71)  xor=0x7f  same64B=n same4K=y
+== O2_mtargs_clang_14
+  20.70%  jeven+54       0x1994   indirect jmp    *(%rdx,%rax,8)
+  48.67%  jeven+9        0x1967   cond     jne    198c <jeven+0x2e>
+  29.64%  shri+23        0x1913   indirect jmp    *(%rdx,%rax,8)
+    pair 0x1913 0x1994  distance=129 (0x81)  xor=0x87  same64B=n same4K=y
+== O2_mtargs_clang_21
+  19.09%  jeven+50       0x19b0   indirect jmp    *(%rdx,%rax,8)
+  51.25%  jeven+9        0x1987   cond     jne    19a8 <jeven+0x2a>
+  28.62%  shri+23        0x1902   indirect jmp    *(%rdx,%rax,8)
+    pair 0x1902 0x19b0  distance=174 (0xae)  xor=0xb2  same64B=n same4K=y
+== O2_mtargs_clang_68
+  18.81%  jeven+85       0x198e   indirect jmp    *(%rdx,%rax,8)
+  52.34%  jeven+9        0x1942   cond     jne    1986 <jeven+0x4d>
+  27.92%  shri+23        0x190b   indirect jmp    *(%rdx,%rax,8)
+    pair 0x190b 0x198e  distance=131 (0x83)  xor=0x85  same64B=n same4K=y
+== O2_mtargs_clang_99
+  62.39%  jeven+9        0x19a2   cond     jne    19eb <jeven+0x52>
+  14.70%  jeven+90       0x19f3   indirect jmp    *(%rdx,%rax,8)
+  21.98%  shri+23        0x1941   indirect jmp    *(%rdx,%rax,8)
+    pair 0x1941 0x19f3  distance=178 (0xb2)  xor=0xb2  same64B=n same4K=y
+== O2_mtargs_gcc_13
+  51.86%  jeven+49       0x14cb   cond     jne    14d2 <jeven+0x38>
+  18.12%  jeven+60       0x14d6   indirect jmp    *(%rdx,%rax,8)
+  29.18%  shri+61        0x146e   indirect jmp    *(%rdx,%rax,8)
+    pair 0x146e 0x14d6  distance=104 (0x68)  xor=0xb8  same64B=n same4K=y
+== O2_musttail_clang_8
+  46.25%  jeven+16       0x18ed   cond     jne    18fd <jeven+0x20>
+  52.79%  jeven+47       0x190c   indirect jmp    *(%rcx,%rax,8)
+== O2_musttail_clang_90
+  42.92%  jeven+16       0x180f   cond     jne    182c <jeven+0x2d>
+  56.33%  jeven+60       0x183b   indirect jmp    *(%rcx,%rax,8)

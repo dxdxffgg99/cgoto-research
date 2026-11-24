@@ -1,0 +1,35 @@
+ 00:15:34 up 1 day,  1:31,  1 user,  load average: 0.26, 0.23, 0.10
+llc: llvm-project 568ec24bf925 + PR #245624; bitcode: clang version 21.1.8 (https://github.com/llvm/llvm-project 2078da43e25a4623cab2d0d60decddf709aaea28); llc -O2 -mtriple=aarch64-linux-gnu -relocation-model=pic; linked by clang 21
+rule   PAD  measured         ind_misp  Gcycles  prediction
+off      0  COLLAPSE         69576430     8.08  merged dispatch: tbnz 0x1014->0x1020 b 0x101c->0x1024 footprints 0x828 0x828: COLLAPSE predicted
+off      1  normal                206     6.26  merged dispatch: tbnz 0x1018->0x1024 b 0x1020->0x1028 footprints 0x828 0x838: no collapse predicted
+off      2  normal                218     6.16  merged dispatch: tbnz 0x101c->0x1028 b 0x1024->0x102c footprints 0x824 0x83c: no collapse predicted
+off      3  normal                214     6.54  merged dispatch: tbnz 0x1020->0x102c b 0x1028->0x1030 footprints 0x83c 0x824: no collapse predicted
+off      4  COLLAPSE         68754666     8.21  merged dispatch: tbnz 0x1024->0x1030 b 0x102c->0x1034 footprints 0x820 0x820: COLLAPSE predicted
+off      5  COLLAPSE         67207033     8.20  merged dispatch: tbnz 0x1028->0x1034 b 0x1030->0x1038 footprints 0x820 0x820: COLLAPSE predicted
+off      6  normal                220     6.42  merged dispatch: tbnz 0x102c->0x1038 b 0x1034->0x103c footprints 0x82c 0x824: no collapse predicted
+off      7  normal                179     6.26  merged dispatch: tbnz 0x1030->0x103c b 0x1038->0x1040 footprints 0x824 0x85c: no collapse predicted
+off      8  COLLAPSE         68172600     8.12  merged dispatch: tbnz 0x1034->0x1040 b 0x103c->0x1044 footprints 0x858 0x858: COLLAPSE predicted
+off      9  normal                205     6.52  merged dispatch: tbnz 0x1038->0x1044 b 0x1040->0x1048 footprints 0x858 0x868: no collapse predicted
+off     10  normal                187     6.23  merged dispatch: tbnz 0x103c->0x1048 b 0x1044->0x104c footprints 0x854 0x86c: no collapse predicted
+off     11  normal                223     6.51  merged dispatch: tbnz 0x1040->0x104c b 0x1048->0x1050 footprints 0x86c 0x874: no collapse predicted
+off     12  COLLAPSE         66954232     8.42  merged dispatch: tbnz 0x1044->0x1050 b 0x104c->0x1054 footprints 0x870 0x870: COLLAPSE predicted
+off     13  COLLAPSE         67135306     8.45  merged dispatch: tbnz 0x1048->0x1054 b 0x1050->0x1058 footprints 0x870 0x870: COLLAPSE predicted
+off     14  normal                198     6.53  merged dispatch: tbnz 0x104c->0x1058 b 0x1054->0x105c footprints 0x87c 0x874: no collapse predicted
+off     15  normal                213     6.46  merged dispatch: tbnz 0x1050->0x105c b 0x1058->0x1060 footprints 0x874 0x84c: no collapse predicted
+on       0  normal                193     5.64  split dispatch (2 br): no collapse possible
+on       1  normal                154     5.65  split dispatch (2 br): no collapse possible
+on       2  normal                158     5.62  split dispatch (2 br): no collapse possible
+on       3  normal                180     5.79  split dispatch (2 br): no collapse possible
+on       4  normal                154     5.66  split dispatch (2 br): no collapse possible
+on       5  normal                125     5.99  split dispatch (2 br): no collapse possible
+on       6  normal                172     6.01  split dispatch (2 br): no collapse possible
+on       7  normal                112     5.76  split dispatch (2 br): no collapse possible
+on       8  normal                136     5.79  split dispatch (2 br): no collapse possible
+on       9  normal                157     5.82  split dispatch (2 br): no collapse possible
+on      10  normal                179     5.79  split dispatch (2 br): no collapse possible
+on      11  normal                134     5.89  split dispatch (2 br): no collapse possible
+on      12  normal                149     5.85  split dispatch (2 br): no collapse possible
+on      13  normal                147     5.89  split dispatch (2 br): no collapse possible
+on      14  normal                144     5.93  split dispatch (2 br): no collapse possible
+on      15  normal                175     5.95  split dispatch (2 br): no collapse possible

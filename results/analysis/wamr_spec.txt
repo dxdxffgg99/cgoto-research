@@ -1,0 +1,9 @@
+# analysis/wamr_spec.sh 2026-11-23: WAMR spec tests (spec f3a0e06235d2d84bb0f3b5014da4370613886965 + ignore_cases.patch), fast interp, x86-64
+iwasm_cgoto_clang    PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_cgoto_gcc      PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_switch_clang   PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_switch_gcc     PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_tail_clang     PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_tail_gcc       PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_tailpn_clang   PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP
+iwasm_tailpn_gcc     PASS  IN ALL 85 cases: 85 PASS, 0 FAIL, 0 SKIP

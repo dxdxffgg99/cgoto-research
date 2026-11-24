@@ -1,0 +1,85 @@
+# /home/kr-dev/workspace/cgoto-research/build/O3/mtnopie_clang  event=br_misp_retired.all_branches:upp period=10007  2026-11-22T22:36:07+09:00
+## mispredictions by function
+    99.58%  [.] jeven  -      -            
+     0.30%  [.] jnei   -      -            
+     0.09%  [.] addi   -      -            
+     0.03%  [.] shri   -      -            
+## mispredictions by instruction
+     0.09%  [.] addi   addi+36      -      -            
+    99.52%  [.] jeven  jeven+16     -      -            
+     0.03%  [.] jeven  jeven+34     -      -            
+     0.03%  [.] jeven  jeven+53     -      -            
+     0.08%  [.] jnei   jnei+16      -      -            
+     0.20%  [.] jnei   jnei+24      -      -            
+     0.02%  [.] jnei   jnei+61      -      -            
+     0.03%  [.] shri   shri+36      -      -            
+## annotate jeven
+ Percent |	Source code & Disassembly of mtnopie_clang for br_misp_retired.all_branches:upp (20799 samples, percent: local period)
+--------------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      0000000000401420 <jeven>:
+    0.00 :   401420: mov    0x404028(,%rdi,8),%rax
+    0.00 :   401428: testb  $0x1,0x404020(,%rax,8)
+   99.94 :   401430: jne    401449 <jeven+0x29>
+    0.00 :   401432: mov    0x404030(,%rdi,8),%rdi
+    0.00 :   40143a: mov    0x404020(,%rdi,8),%rax
+    0.03 :   401442: jmp    *0x402210(,%rax,8)
+    0.00 :   401449: add    $0x3,%rdi
+    0.00 :   40144d: mov    0x404020(,%rdi,8),%rax
+    0.03 :   401455: jmp    *0x402210(,%rax,8)
+## annotate jnei
+ Percent |	Source code & Disassembly of mtnopie_clang for br_misp_retired.all_branches:upp (62 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      0000000000401460 <jnei>:
+    0.00 :   401460: mov    0x404028(,%rdi,8),%rax
+    0.00 :   401468: mov    0x404020(,%rax,8),%rax
+   25.81 :   401470: cmp    0x404030(,%rdi,8),%rax
+   67.74 :   401478: jne    40148d <jnei+0x2d>
+    0.00 :   40147a: add    $0x4,%rdi
+    0.00 :   40147e: mov    0x404020(,%rdi,8),%rax
+    0.00 :   401486: jmp    *0x402210(,%rax,8)
+    0.00 :   40148d: mov    0x404038(,%rdi,8),%rdi
+    0.00 :   401495: mov    0x404020(,%rdi,8),%rax
+    6.45 :   40149d: jmp    *0x402210(,%rax,8)
+## annotate addi
+ Percent |	Source code & Disassembly of mtnopie_clang for br_misp_retired.all_branches:upp (18 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      0000000000401380 <addi>:
+    0.00 :   401380: mov    0x404030(,%rdi,8),%rax
+    0.00 :   401388: mov    0x404028(,%rdi,8),%rcx
+    0.00 :   401390: add    %rax,0x404020(,%rcx,8)
+    0.00 :   401398: mov    0x404038(,%rdi,8),%rax
+    0.00 :   4013a0: add    $0x3,%rdi
+  100.00 :   4013a4: jmp    *0x402210(,%rax,8)
+## annotate loadi
+## annotate mov
+## annotate muli
+## annotate shri
+ Percent |	Source code & Disassembly of mtnopie_clang for br_misp_retired.all_branches:upp (7 samples, percent: local period)
+----------------------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3      Disassembly of section .text:
+         :
+         : 5      00000000004013f0 <shri>:
+    0.00 :   4013f0: movzbl 0x404030(,%rdi,8),%ecx
+    0.00 :   4013f8: mov    0x404028(,%rdi,8),%rax
+    0.00 :   401400: shrq   %cl,0x404020(,%rax,8)
+    0.00 :   401408: mov    0x404038(,%rdi,8),%rax
+    0.00 :   401410: add    $0x3,%rdi
+  100.00 :   401414: jmp    *0x402210(,%rax,8)

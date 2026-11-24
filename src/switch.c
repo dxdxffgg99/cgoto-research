@@ -22,8 +22,9 @@ int main(void)
 {
     uint64_t pc = 0;
 
-    while (ram[pc] != HALT) {
+    for (;;) {
         switch (ram[pc]) {
+            case HALT:  goto done;
             case LOADI: ram[ram[pc + 1]]   = ram[pc + 2];      pc += 3; break;
             case MOV:   ram[ram[pc + 1]]   = ram[ram[pc + 2]]; pc += 3; break;
             case ADDI:  ram[ram[pc + 1]]  += ram[pc + 2];      pc += 3; break;
@@ -31,9 +32,11 @@ int main(void)
             case SHRI:  ram[ram[pc + 1]] >>= ram[pc + 2];      pc += 3; break;
             case JEVEN: pc = ram[ram[pc + 1]] & 1            ? pc + 3 : ram[pc + 2]; break;
             case JNEI:  pc = ram[ram[pc + 1]] != ram[pc + 2] ? ram[pc + 3] : pc + 4; break;
+            default:    __builtin_unreachable();
         }
     }
 
+done:
     printf("%llu\n", (unsigned long long)ram[102]);
     return 0;
 }

@@ -1,0 +1,6 @@
+404
+/tmp/tmp.DhqxVtpjnt/bin/: 404 files pushed, 0 skipped. 6.3 MB/s (6212328 bytes in 0.936s)
+/tmp/tmp.DhqxVtpjnt/list: 1 file pushed, 0 skipped. 238.6 MB/s (17502 bytes in 0.000s)
+analysis/layout_run_android.sh: 1 file pushed, 0 skipped. 199.1 MB/s (2782 bytes in 0.000s)
+2 files pushed, 0 skipped. 0.3 MB/s (20284 bytes in 0.055s)
+404 lines -> results/analysis/layoutdist_galaxy-s25edge.txt

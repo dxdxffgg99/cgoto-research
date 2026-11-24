@@ -1,0 +1,24 @@
+cclang1101         default       78
+cclang1101         indirect200   78
+cclang1101         predsucc1000  ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1101         both          ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1201         default       1
+cclang1201         indirect200   78
+cclang1201         predsucc1000  ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1201         both          ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1810         default       1
+cclang1810         indirect200   78
+cclang1810         predsucc1000  ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1810         both          ERR clang (LLVM option parsing): Unknown command line argument '-tail-dup-pred-size=1000'.  Try: 'clang (LLVM option parsing
+cclang1910         default       1
+cclang1910         indirect200   1
+cclang1910         predsucc1000  1
+cclang1910         both          78
+cclang2110         default       1
+cclang2110         indirect200   78
+cclang2110         predsucc1000  1
+cclang2110         both          78
+armv8-cclang2110   default       1
+armv8-cclang2110   indirect200   78
+armv8-cclang2110   predsucc1000  1
+armv8-cclang2110   both          78

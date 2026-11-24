@@ -1,0 +1,38 @@
+===== i9-14900k: per-benchmark baseline (cgoto) front-end detail
+  lua_cgoto_gcc    Mandelbrot  FE= 34.8 FElat=  7.8 FEbw= 27.0 BE=  0.4 IPC=4.13 DSB%= 99.9 icache%= 0.0 resteer%= 0.1 d2m%= 0.0 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    NBody       FE= 26.8 FElat=  8.6 FEbw= 18.2 BE=  0.4 IPC=4.41 DSB%= 99.9 icache%= 0.0 resteer%= 0.3 d2m%= 0.2 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    Sieve       FE= 15.4 FElat=  3.5 FEbw= 11.9 BE=  8.8 IPC=4.36 DSB%= 99.6 icache%= 0.0 resteer%= 0.6 d2m%= 0.4 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    Storage     FE= 24.9 FElat=  8.9 FEbw= 16.1 BE= 10.0 IPC=3.76 DSB%= 96.1 icache%= 0.1 resteer%= 0.9 d2m%= 6.9 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    Richards    FE= 19.5 FElat=  5.4 FEbw= 14.1 BE= 13.7 IPC=3.71 DSB%= 99.6 icache%= 0.0 resteer%= 0.5 d2m%= 1.0 BACL/ki= 0.00 indmis/ki= 0.01
+  lua_cgoto_clang  Mandelbrot  FE= 30.0 FElat= 13.7 FEbw= 16.3 BE=  0.4 IPC=4.34 DSB%= 96.9 icache%= 0.0 resteer%= 0.1 d2m%=15.7 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  NBody       FE= 12.5 FElat=  3.9 FEbw=  8.6 BE=  0.6 IPC=5.08 DSB%= 99.3 icache%= 0.0 resteer%= 0.3 d2m%= 4.4 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  Sieve       FE=  4.6 FElat=  1.1 FEbw=  3.5 BE=  6.2 IPC=4.80 DSB%= 99.7 icache%= 0.0 resteer%= 0.7 d2m%= 0.2 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  Storage     FE= 20.1 FElat=  6.6 FEbw= 13.5 BE= 10.0 IPC=4.02 DSB%= 96.2 icache%= 0.0 resteer%= 0.6 d2m%= 5.9 BACL/ki= 0.00 indmis/ki= 0.01
+  lua_cgoto_clang  Richards    FE=  5.8 FElat=  0.9 FEbw=  4.9 BE= 16.5 IPC=4.20 DSB%= 99.9 icache%= 0.0 resteer%= 0.5 d2m%= 0.3 BACL/ki= 0.00 indmis/ki= 0.01
+--- i9-14900k: regression over benchmarks x pairs:  dcyc% ~ a*dins% + b*FE_ref(%) + c
+   dins only      coef=[ 0.245 -2.497]  R2=0.26  n=84
+   dins + FE_ref  coef=[ 0.267 -0.397  3.176]  R2=0.54  n=84
+   largest residual -14.3pp: Mandelbrot  lua_cgoto_clang->lua_tailpn_clang dcyc -23.0% dins  +0.3% FE_ref 30.0
+   largest residual -12.0pp: Permute     lua_cgoto_clang->lua_tailpn_clang dcyc  -9.5% dins  +2.8% FE_ref  3.5
+   largest residual +10.5pp: Sieve       lua_cgoto_clang->lua_tail_clang dcyc +20.9% dins +33.8% FE_ref  4.6
+   largest residual  -9.5pp: Mandelbrot  lua_cgoto_gcc->lua_tailpn_gcc dcyc -12.9% dins +27.2% FE_ref 34.8
+   largest residual  -9.0pp: Towers      lua_cgoto_clang->lua_tailpn_clang dcyc  -6.9% dins  +2.3% FE_ref  4.2
+===== i5-1135g7: per-benchmark baseline (cgoto) front-end detail
+  lua_cgoto_gcc    Mandelbrot  FE= 23.7 FElat=  1.4 FEbw= 22.3 BE=  0.1 IPC=4.00 DSB%= 99.9 icache%= 0.0 resteer%= 0.2 d2m%= 0.1 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    NBody       FE= 16.5 FElat=  2.5 FEbw= 14.0 BE=  1.6 IPC=3.93 DSB%= 99.6 icache%= 0.0 resteer%= 0.4 d2m%= 0.4 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    Sieve       FE=  6.4 FElat=  1.4 FEbw=  5.0 BE= 16.5 IPC=3.75 DSB%= 99.7 icache%= 0.0 resteer%= 0.6 d2m%= 0.2 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_gcc    Storage     FE= 19.8 FElat=  5.3 FEbw= 14.5 BE=  6.9 IPC=3.26 DSB%= 81.7 icache%= 0.1 resteer%= 1.2 d2m%= 7.7 BACL/ki= 0.02 indmis/ki= 0.03
+  lua_cgoto_gcc    Richards    FE= 11.3 FElat=  3.1 FEbw=  8.3 BE= 11.7 IPC=3.45 DSB%= 95.0 icache%= 0.0 resteer%= 0.8 d2m%= 4.6 BACL/ki= 0.00 indmis/ki= 0.09
+  lua_cgoto_clang  Mandelbrot  FE= 13.8 FElat=  2.0 FEbw= 11.8 BE=  4.2 IPC=4.18 DSB%= 98.5 icache%= 0.0 resteer%= 0.2 d2m%= 2.0 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  NBody       FE=  5.3 FElat=  0.5 FEbw=  4.9 BE=  5.8 IPC=4.29 DSB%= 99.7 icache%= 0.0 resteer%= 0.4 d2m%= 0.2 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  Sieve       FE=  4.8 FElat=  1.1 FEbw=  3.8 BE= 13.6 IPC=3.82 DSB%= 99.7 icache%= 0.0 resteer%= 0.6 d2m%= 0.2 BACL/ki= 0.00 indmis/ki= 0.00
+  lua_cgoto_clang  Storage     FE= 20.5 FElat=  4.8 FEbw= 15.7 BE=  7.3 IPC=3.33 DSB%= 77.4 icache%= 0.1 resteer%= 1.1 d2m%= 7.1 BACL/ki= 0.01 indmis/ki= 0.03
+  lua_cgoto_clang  Richards    FE=  6.3 FElat=  1.4 FEbw=  4.9 BE= 14.3 IPC=3.55 DSB%= 96.4 icache%= 0.0 resteer%= 0.8 d2m%= 3.1 BACL/ki= 0.00 indmis/ki= 0.07
+--- i5-1135g7: regression over benchmarks x pairs:  dcyc% ~ a*dins% + b*FE_ref(%) + c
+   dins only      coef=[ 0.498 -0.408]  R2=0.75  n=84
+   dins + FE_ref  coef=[ 0.498 -0.033 -0.057]  R2=0.75  n=84
+   largest residual +15.3pp: NBody       lua_cgoto_clang->lua_tail_clang dcyc +25.8% dins +21.5% FE_ref  5.3
+   largest residual -10.5pp: Permute     lua_cgoto_gcc->lua_tailpn_gcc dcyc  -1.7% dins +18.1% FE_ref  6.8
+   largest residual -10.4pp: Permute     lua_cgoto_gcc->lua_tail_gcc dcyc +11.7% dins +45.0% FE_ref  6.8
+   largest residual -10.0pp: Mandelbrot  lua_cgoto_gcc->lua_switch_gcc dcyc  -6.3% dins  +9.2% FE_ref 23.7
+   largest residual  -9.0pp: NBody       lua_cgoto_gcc->lua_switch_gcc dcyc  -6.4% dins  +6.4% FE_ref 16.5

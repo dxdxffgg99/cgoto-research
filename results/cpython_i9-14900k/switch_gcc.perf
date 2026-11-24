@@ -1,0 +1,17 @@
+# started on Sun Nov 22 04:19:25 2026
+
+
+ Performance counter stats for '/home/kr0/cgoto-research/build/pyperf-venv/bin/pyperformance run -p /home/kr0/cgoto-research/build/cpython/switch_gcc/bin/python3 --affinity=4 --same-loops /home/kr0/cgoto-research/results/cpython_i9-14900k/cgoto_gcc.json -o /home/kr0/cgoto-research/results/cpython_i9-14900k/switch_gcc.json':
+
+        4008239.99 msec task-clock:u                                                          
+    12337224339150      cpu_core/cycles/u                                                     
+    36180535757749      cpu_core/instructions/u                                               
+     6840142902725      cpu_core/branches/u                                                   
+       45132810753      cpu_core/branch-misses/u                                              
+
+    4161.314254456 seconds time elapsed
+
+    3847.928271000 seconds user
+     134.310238000 seconds sys
+
+

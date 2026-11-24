@@ -1,0 +1,11 @@
+# analysis/a76_collapse_rule.py on Cortex-A76 (Raspberry Pi 5), clang 21.1.8 -O2
+# rule found on seeds 0-100 (results/analysis/layoutdist_cortex-a76.txt); predictions for seeds 101-200 written before measuring
+# (a76_collapse_prediction_101-200.txt, sha256 7c03624a1e0024da1108354aac06a7be0acf91e25e6c51fdbc26a99dcc4a9108), measured in layoutdist_cortex-a76_validation.txt
+
+## in-sample, seeds 0-100
+mtargs_clang: agree 101/101, predicted 29, observed 29
+musttail_clang: agree 101/101, predicted 35, observed 35
+
+## out-of-sample, seeds 101-200
+mtargs_clang: agree 100/100, predicted 31, observed 31
+musttail_clang: agree 100/100, predicted 33, observed 33

@@ -1,0 +1,22 @@
+# /home/kr-dev/workspace/cgoto-research/build/O3/cgoto_clang  event=br_misp_retired.all_branches:upp period=10007  2026-11-22T22:36:20+09:00
+## mispredictions by function
+   100.00%  [.] main  -      -            
+## mispredictions by instruction
+     0.07%  [.] main  main+121     -      -            
+     0.02%  [.] main  main+158     -      -            
+     0.19%  [.] main  main+201     -      -            
+    99.24%  [.] main  main+217     -      -            
+     0.06%  [.] main  main+231     -      -            
+     0.07%  [.] main  main+251     -      -            
+     0.09%  [.] main  main+265     -      -            
+     0.17%  [.] main  main+270     -      -            
+     0.01%  [.] main  main+283     -      -            
+     0.08%  [.] main  main+300     -      -            
+     0.00%  [.] main  main+93      -      -            
+## annotate jeven
+## annotate jnei
+## annotate addi
+## annotate loadi
+## annotate mov
+## annotate muli
+## annotate shri

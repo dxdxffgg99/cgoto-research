@@ -1,0 +1,35 @@
+ 19:50:51 up 21:06,  1 user,  load average: 0.54, 0.58, 0.50
+clang version 21.1.8 (https://github.com/llvm/llvm-project 2078da43e25a4623cab2d0d60decddf709aaea28)
+flags                    PAD  measured         ind_misp  Gcycles  prediction
+default                    0  COLLAPSE         69535330     8.07  merged dispatch: tbnz 0x1014->0x1020 b 0x101c->0x1024 footprints 0x828 0x828: COLLAPSE predicted
+default                    1  normal                229     6.20  merged dispatch: tbnz 0x1018->0x1024 b 0x1020->0x1028 footprints 0x828 0x838: no collapse predicted
+default                    2  normal                267     6.10  merged dispatch: tbnz 0x101c->0x1028 b 0x1024->0x102c footprints 0x824 0x83c: no collapse predicted
+default                    3  normal                195     6.47  merged dispatch: tbnz 0x1020->0x102c b 0x1028->0x1030 footprints 0x83c 0x824: no collapse predicted
+default                    4  COLLAPSE         68756680     8.21  merged dispatch: tbnz 0x1024->0x1030 b 0x102c->0x1034 footprints 0x820 0x820: COLLAPSE predicted
+default                    5  COLLAPSE         67216626     8.20  merged dispatch: tbnz 0x1028->0x1034 b 0x1030->0x1038 footprints 0x820 0x820: COLLAPSE predicted
+default                    6  normal                254     6.34  merged dispatch: tbnz 0x102c->0x1038 b 0x1034->0x103c footprints 0x82c 0x824: no collapse predicted
+default                    7  normal                190     6.26  merged dispatch: tbnz 0x1030->0x103c b 0x1038->0x1040 footprints 0x824 0x85c: no collapse predicted
+default                    8  COLLAPSE         67922212     8.12  merged dispatch: tbnz 0x1034->0x1040 b 0x103c->0x1044 footprints 0x858 0x858: COLLAPSE predicted
+default                    9  normal                233     6.28  merged dispatch: tbnz 0x1038->0x1044 b 0x1040->0x1048 footprints 0x858 0x868: no collapse predicted
+default                   10  normal                220     6.23  merged dispatch: tbnz 0x103c->0x1048 b 0x1044->0x104c footprints 0x854 0x86c: no collapse predicted
+default                   11  normal                220     6.54  merged dispatch: tbnz 0x1040->0x104c b 0x1048->0x1050 footprints 0x86c 0x874: no collapse predicted
+default                   12  COLLAPSE         66937698     8.42  merged dispatch: tbnz 0x1044->0x1050 b 0x104c->0x1054 footprints 0x870 0x870: COLLAPSE predicted
+default                   13  COLLAPSE         67098925     8.45  merged dispatch: tbnz 0x1048->0x1054 b 0x1050->0x1058 footprints 0x870 0x870: COLLAPSE predicted
+default                   14  normal                184     6.52  merged dispatch: tbnz 0x104c->0x1058 b 0x1054->0x105c footprints 0x87c 0x874: no collapse predicted
+default                   15  normal                201     6.63  merged dispatch: tbnz 0x1050->0x105c b 0x1058->0x1060 footprints 0x874 0x84c: no collapse predicted
+-mllvm -tail-dup-size=4    0  normal                183     5.66  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    1  normal                154     5.71  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    2  normal                165     5.63  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    3  normal                182     5.79  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    4  normal                139     5.66  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    5  normal                158     5.99  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    6  normal                125     6.01  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    7  normal                115     5.76  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    8  normal                119     5.79  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4    9  normal                154     5.94  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   10  normal                143     5.76  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   11  normal                140     5.89  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   12  normal                154     5.85  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   13  normal                140     5.89  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   14  normal                146     5.94  split dispatch (2 br): no collapse possible
+-mllvm -tail-dup-size=4   15  normal                136     5.95  split dispatch (2 br): no collapse possible

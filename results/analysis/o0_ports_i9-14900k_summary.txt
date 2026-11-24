@@ -1,0 +1,33 @@
+# analysis/o0_ports.sh on i9-14900K, -O0, Collatz limit 1M, median of 2 rounds; per cycle unless noted
+                                         cgoto_gcc    musttail_gcc     cgoto_clang  musttail_clang
+Gcycles                                      5.187           3.940           5.318           3.028
+IPC                                          2.889           3.781           2.123           3.451
+uops executed / cycle                        3.429           3.628           2.671           4.601
+uops port port_0 / cycle                     0.451           0.372           0.070           0.109
+uops port port_1 / cycle                     0.856           0.900           0.664           0.641
+uops port port_2_3_10 / cycle                1.113           0.932           1.530           1.861
+uops port port_4_9 / cycle                   0.212           0.237           0.418           0.784
+uops port port_5_11 / cycle                  0.928           0.594           0.150           0.210
+uops port port_6 / cycle                     0.387           0.365           0.253           0.261
+uops port_7_8 / cycle                        0.185           0.240           0.371           0.804
+cycles with >=1 uops executed                0.928           0.929           0.872           0.891
+cycles with >=2 uops executed                0.843           0.877           0.717           0.857
+cycles with >=3 uops executed                0.679           0.733           0.518           0.787
+cycles with >=4 uops executed                0.483           0.513           0.316           0.703
+cycles 0 ports (exe_bound_0)                 0.001           0.007           0.006           0.001
+cycles 1 port util                           0.085           0.052           0.157           0.034
+cycles 2 ports util                          0.166           0.144           0.199           0.071
+stalls_total                                 0.072           0.071           0.129           0.109
+bound_on_loads                               0.030           0.008           0.083           0.028
+bound_on_stores                              0.000           0.000           0.000           0.000
+resource_stalls.scoreboard                   0.000           0.000           0.000           0.000
+resource_stalls.sb                           0.000           0.000           0.000           0.000
+int_misc.recovery_cycles                     0.021           0.027           0.024           0.039
+int_misc.clear_resteer_cycles                0.010           0.012           0.013           0.017
+br_misp (M, absolute)                       19.394          21.824          20.765          24.273
+machine_clears.count (K, abs)              978.697         214.130        2357.001          76.187
+machine_clears.memory_ordering (K)         976.798         212.599        2355.054          74.987
+ld_blocks.store_forward (M, abs)             0.000           0.000           0.000           0.000
+ld_blocks.address_alias (M, abs)             0.000           0.000           0.000           0.000
+ld_blocks.no_sr (M, abs)                     0.000           0.000           0.000           0.000
+cycles per br_misp                         266.716         180.739         256.389         124.784
